@@ -3,12 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Amit Kumar Mehta | Data & ML Engineer</title>
+<title>Amit Kumar Mehta | Portfolio</title>
 
 <style>
 :root{
   --primary:#2563eb;
-  --secondary:#06b6d4;
   --dark:#020617;
   --card:#0f172a;
   --text:#f8fafc;
@@ -17,12 +16,13 @@
 
 *{margin:0;padding:0;box-sizing:border-box;font-family:Segoe UI,sans-serif}
 body{background:var(--dark);color:var(--text);line-height:1.7}
-a{text-decoration:none;color:inherit}
+a{text-decoration:none;color:var(--text);transition:0.3s}
+a:hover{color:var(--primary)}
 
 section{padding:70px 10%}
 h2{text-align:center;font-size:2.4rem;margin-bottom:40px}
 
-/* NAV */
+/* NAVBAR */
 nav{
   position:sticky;top:0;z-index:1000;
   background:#020617;
@@ -32,8 +32,6 @@ nav{
 }
 .logo{font-size:1.6rem;font-weight:700;color:var(--primary)}
 nav ul{display:flex;gap:28px;list-style:none}
-nav a{transition:.3s}
-nav a:hover{color:var(--secondary)}
 
 /* HERO */
 .hero{
@@ -43,36 +41,32 @@ nav a:hover{color:var(--secondary)}
   gap:50px
 }
 .hero img{
-  width:250px;border-radius:50%;
+  width:240px;border-radius:50%;
   border:4px solid var(--primary)
 }
 .hero h1{font-size:3.2rem}
 .hero span{color:var(--primary)}
 .hero p{
-  max-width:700px;
+  max-width:720px;
   color:var(--muted);
   margin:18px 0;
   font-size:1.15rem
 }
 
-/* BUTTONS */
+/* BUTTONS – SAME EFFECT AS NAVBAR */
 .btn{
   display:inline-block;
-  padding:12px 28px;
-  background:var(--primary);
+  padding:12px 26px;
+  border:2px solid var(--primary);
   border-radius:30px;
+  background:transparent;
+  color:var(--text);
   font-weight:600;
   margin-right:15px;
-  transition:.3s
+  transition:0.3s
 }
 .btn:hover{
-  background:linear-gradient(135deg,var(--primary),var(--secondary));
-  transform:translateY(-3px);
-  box-shadow:0 0 20px rgba(37,99,235,.6)
-}
-.btn.outline{
-  background:transparent;
-  border:2px solid var(--primary)
+  color:var(--primary);
 }
 
 /* GRID & CARD */
@@ -84,19 +78,75 @@ nav a:hover{color:var(--secondary)}
 .card{
   background:var(--card);
   padding:28px;
-  border-radius:16px;
+  border-radius:14px;
   border:1px solid #1e293b;
-  transition:.4s
+  transition:0.3s
 }
 .card:hover{
-  transform:translateY(-8px);
-  box-shadow:0 20px 50px rgba(0,0,0,.6)
+  color:var(--primary);
 }
 .card p{color:var(--muted);margin-top:10px}
-.stack{margin-top:12px;color:var(--secondary);font-weight:600}
 
-/* CONTACT */
+/* CERTIFICATIONS GRID (3x) */
+.cert-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:30px
+}
+@media(max-width:900px){
+  .cert-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:600px){
+  .cert-grid{grid-template-columns:1fr}
+}
+
+.cert-card{
+  position:relative;
+  background:var(--card);
+  border:1px solid #1e293b;
+  border-radius:14px;
+  padding:40px 25px;
+  text-align:center;
+  overflow:hidden;
+  transition:0.3s
+}
+.cert-card:hover{
+  color:var(--primary);
+}
+
+.cert-overlay{
+  position:absolute;
+  inset:0;
+  background:rgba(2,6,23,0.95);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  opacity:0;
+  transition:0.3s
+}
+.cert-card:hover .cert-overlay{
+  opacity:1
+}
+.cert-overlay span{
+  border:2px solid var(--primary);
+  padding:10px 22px;
+  border-radius:25px;
+  color:var(--primary);
+  font-weight:600
+}
+
+/* GET IN TOUCH */
 .contact{text-align:center}
+.contact-options{
+  display:flex;
+  justify-content:center;
+  gap:30px;
+  margin-top:25px;
+  flex-wrap:wrap
+}
+.contact-options a{
+  font-weight:600
+}
 
 /* FOOTER */
 footer{
@@ -106,7 +156,6 @@ footer{
   color:var(--muted)
 }
 
-/* MOBILE */
 @media(max-width:900px){
   nav ul{display:none}
   .hero{flex-direction:column;text-align:center}
@@ -124,147 +173,100 @@ footer{
     <li><a href="#skills">Skills</a></li>
     <li><a href="#projects">Projects</a></li>
     <li><a href="#certifications">Certifications</a></li>
-    <li><a href="#contact">Contact</a></li>
+    <li><a href="#contact">Get In Touch</a></li>
   </ul>
 </nav>
 
-<!-- HERO -->
 <section class="hero">
   <img src="profile.jpg" alt="Amit Kumar Mehta">
   <div>
     <h1>Amit <span>Kumar Mehta</span></h1>
     <p>
-      I am a B.Tech Computer Science Engineering (3rd Year) student at
-      <b>Technocrats Institute of Technology, Bhopal</b>.
-      My career goal is to become a <b>Data Engineer</b> and <b>Machine Learning Engineer</b>.
-      I enjoy working with data, building ML models, and solving real-world problems
-      using structured and unstructured datasets.
+      B.Tech CSE (3rd Year) student at Technocrats Institute of Technology, Bhopal.
+      Aspiring Data Engineer and Machine Learning Engineer with strong interest
+      in data analytics, ML models, and real-world problem solving.
     </p>
     <a href="#projects" class="btn">View Projects</a>
-    <a href="Amit Resume.pdf" class="btn outline" download>Download Resume</a>
+    <a href="Amit Resume.pdf" class="btn" download>Download Resume</a>
   </div>
 </section>
 
-<!-- ABOUT -->
 <section id="about">
   <h2>About Me</h2>
-  <p style="max-width:900px;margin:auto;text-align:center;color:var(--muted);font-size:1.1rem">
-    I have a strong foundation in programming, data structures, and machine learning concepts.
-    I am actively improving my skills through certifications, competitive programming,
-    and hands-on practice. My interest lies in building scalable data pipelines,
-    performing data analysis, and applying ML algorithms to meaningful problems.
+  <p style="max-width:900px;margin:auto;text-align:center;color:var(--muted)">
+    I am focused on building a strong foundation in programming, data structures,
+    machine learning, and cloud fundamentals. I continuously improve my skills
+    through certifications, competitive programming, and hands-on practice.
   </p>
 </section>
 
-<!-- SKILLS -->
 <section id="skills">
   <h2>Technical Skills</h2>
   <div class="grid">
-    <div class="card">
-      <h3>C++</h3>
-      <p>Strong understanding of data structures, algorithms, and competitive programming.</p>
-    </div>
-    <div class="card">
-      <h3>Java</h3>
-      <p>Object-oriented programming, problem solving, and application development.</p>
-    </div>
-    <div class="card">
-      <h3>Python</h3>
-      <p>Data analysis, scripting, automation, and ML model implementation.</p>
-    </div>
-    <div class="card">
-      <h3>Machine Learning</h3>
-      <p>Supervised learning, regression, classification, and model evaluation.</p>
-    </div>
-    <div class="card">
-      <h3>HTML & CSS</h3>
-      <p>Responsive layouts, UI design, and modern web development basics.</p>
-    </div>
-    <div class="card">
-      <h3>Apex</h3>
-      <p>Understanding of Salesforce backend logic and platform fundamentals.</p>
-    </div>
+    <div class="card"><h3>C++</h3><p>Data structures, algorithms, competitive programming.</p></div>
+    <div class="card"><h3>Java</h3><p>Object-oriented programming and problem solving.</p></div>
+    <div class="card"><h3>Python</h3><p>Data analysis, automation, ML implementation.</p></div>
+    <div class="card"><h3>Machine Learning</h3><p>Regression, classification, supervised learning.</p></div>
+    <div class="card"><h3>HTML & CSS</h3><p>Responsive and clean UI development.</p></div>
+    <div class="card"><h3>Apex</h3><p>Salesforce backend logic fundamentals.</p></div>
   </div>
 </section>
 
-<!-- PROJECTS -->
 <section id="projects">
   <h2>Projects</h2>
   <div class="grid">
-    <div class="card">
-      <h3>Speed Typing Test</h3>
-      <p>
-        Built a Python-based typing analysis system that calculates typing speed,
-        accuracy, net speed, and performance metrics using machine learning concepts.
-      </p>
-      <div class="stack">Python • Machine Learning</div>
-    </div>
-
-    <div class="card">
-      <h3>Student Data Analytics System</h3>
-      <p>
-        Analyzed structured student performance data to identify trends and insights
-        using Python and basic statistical techniques.
-      </p>
-      <div class="stack">Python • Data Analysis</div>
-    </div>
-
-    <div class="card">
-      <h3>ML Model Playground</h3>
-      <p>
-        Implemented regression and classification models to understand
-        model behavior on real datasets.
-      </p>
-      <div class="stack">Machine Learning • Python</div>
-    </div>
+    <div class="card"><h3>Speed Typing Test</h3><p>ML-based typing speed and accuracy analysis tool.</p></div>
+    <div class="card"><h3>Student Data Analytics</h3><p>Analyzed student performance data to identify trends.</p></div>
+    <div class="card"><h3>ML Model Playground</h3><p>Implemented regression and classification models.</p></div>
   </div>
 </section>
 
-<!-- CERTIFICATIONS -->
 <section id="certifications">
   <h2>Certifications</h2>
-  <div class="grid">
 
-    <a href="google-cloud-career-launchpad.pdf" target="_blank" class="card">
+  <div class="cert-grid">
+
+    <a href="google-cloud-career-launchpad.pdf" target="_blank" class="cert-card">
       <h3>Google Cloud Career Launchpad</h3>
-      <p>Cloud fundamentals and data workflows.</p>
+      <div class="cert-overlay"><span>View Certificate</span></div>
     </a>
 
-    <a href="oracle-data-science-genai.pdf" target="_blank" class="card">
-      <h3>Oracle – Data Science & Generative AI</h3>
-      <p>Data science and GenAI foundations.</p>
+    <a href="oracle-data-science-genai.pdf" target="_blank" class="cert-card">
+      <h3>Oracle – Data Science & GenAI</h3>
+      <div class="cert-overlay"><span>View Certificate</span></div>
     </a>
 
-    <a href="ibm-cloud-data-fundamentals.pdf" target="_blank" class="card">
+    <a href="ibm-cloud-data-fundamentals.pdf" target="_blank" class="cert-card">
       <h3>IBM – Cloud & Data Fundamentals</h3>
-      <p>Cloud infrastructure and data concepts.</p>
+      <div class="cert-overlay"><span>View Certificate</span></div>
     </a>
 
-    <a href="servicenow-welcome.pdf" target="_blank" class="card">
-      <h3>ServiceNow</h3>
-      <p>Platform basics and workflows.</p>
+    <a href="servicenow-welcome.pdf" target="_blank" class="cert-card">
+      <h3>ServiceNow – Welcome</h3>
+      <div class="cert-overlay"><span>View Certificate</span></div>
     </a>
 
-    <a href="tata-generative-ai.pdf" target="_blank" class="card">
+    <a href="tata-generative-ai.pdf" target="_blank" class="cert-card">
       <h3>TATA – Generative AI</h3>
-      <p>Introduction to GenAI applications.</p>
+      <div class="cert-overlay"><span>View Certificate</span></div>
     </a>
 
-    <a href="infosys-python-basics.pdf" target="_blank" class="card">
+    <a href="infosys-python-basics.pdf" target="_blank" class="cert-card">
       <h3>Infosys – Python Basics</h3>
-      <p>Python programming fundamentals.</p>
+      <div class="cert-overlay"><span>View Certificate</span></div>
     </a>
 
   </div>
 </section>
 
-<!-- CONTACT -->
 <section id="contact" class="contact">
   <h2>Get In Touch</h2>
-  <p style="color:var(--muted);margin-bottom:18px">
-    Open to internships, projects, and learning opportunities.
-  </p>
-  <a href="mailto:102amitmehta@gmail.com" class="btn">Email Me</a>
+  <div class="contact-options">
+    <a href="mailto:102amitmehta@gmail.com">Email</a>
+    <a href="https://github.com/amitmehta102" target="_blank">GitHub</a>
+    <a href="https://www.linkedin.com/in/amit-mehta-42b839296" target="_blank">LinkedIn</a>
+    <a href="https://www.instagram.com/" target="_blank">Instagram</a>
+  </div>
 </section>
 
 <footer>
@@ -273,4 +275,3 @@ footer{
 
 </body>
 </html>
-
