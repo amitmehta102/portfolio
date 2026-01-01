@@ -98,6 +98,24 @@ nav ul li a:hover::after{width:100%}
 .card:hover p{color:#fff}
 .card p{color:var(--muted);margin-top:10px}
 
+/* SKILL PERCENTAGE */
+.skill-percent{
+  margin-top:12px;
+  font-weight:600;
+}
+.skill-bar{
+  margin-top:6px;
+  height:8px;
+  background:#1e293b;
+  border-radius:6px;
+  overflow:hidden;
+}
+.skill-bar span{
+  display:block;
+  height:100%;
+  background:var(--blue);
+}
+
 /* CERTIFICATIONS */
 .cert-grid{
   display:grid;
@@ -230,6 +248,7 @@ nav ul li a:hover::after{width:100%}
     </p>
     <a href="#projects" class="btn">View Projects</a>
     <a href="Amit-Resume.pdf" class="btn">View Resume</a>
+    <a href="#contact" class="btn">Get In Touch</a>
   </div>
 </section>
 
@@ -245,12 +264,49 @@ through certifications, competitive programming, and hands-on practice.
 <section id="skills">
 <h2>Technical Skills</h2>
 <div class="grid">
-<div class="card"><h3>C++</h3><p>Data structures and algorithms.</p></div>
-<div class="card"><h3>Java</h3><p>OOP and logical problem solving.</p></div>
-<div class="card"><h3>Python</h3><p>Data analysis and ML.</p></div>
-<div class="card"><h3>Machine Learning</h3><p>Regression & classification.</p></div>
-<div class="card"><h3>HTML & CSS</h3><p>Responsive UI development.</p></div>
-<div class="card"><h3>Apex</h3><p>Salesforce backend fundamentals.</p></div>
+
+<div class="card">
+<h3>C++</h3>
+<p>Data structures and algorithms.</p>
+<div class="skill-percent">85%</div>
+<div class="skill-bar"><span style="width:85%"></span></div>
+</div>
+
+<div class="card">
+<h3>Java</h3>
+<p>OOP and logical problem solving.</p>
+<div class="skill-percent">80%</div>
+<div class="skill-bar"><span style="width:80%"></span></div>
+</div>
+
+<div class="card">
+<h3>Python</h3>
+<p>Data analysis and ML.</p>
+<div class="skill-percent">75%</div>
+<div class="skill-bar"><span style="width:75%"></span></div>
+</div>
+
+<div class="card">
+<h3>Machine Learning</h3>
+<p>Regression & classification.</p>
+<div class="skill-percent">70%</div>
+<div class="skill-bar"><span style="width:70%"></span></div>
+</div>
+
+<div class="card">
+<h3>HTML & CSS</h3>
+<p>Responsive UI development.</p>
+<div class="skill-percent">90%</div>
+<div class="skill-bar"><span style="width:90%"></span></div>
+</div>
+
+<div class="card">
+<h3>Apex</h3>
+<p>Salesforce backend fundamentals.</p>
+<div class="skill-percent">65%</div>
+<div class="skill-bar"><span style="width:65%"></span></div>
+</div>
+
 </div>
 </section>
 
@@ -267,47 +323,23 @@ through certifications, competitive programming, and hands-on practice.
 <h2>Certifications</h2>
 <div class="cert-grid">
 
-<div class="cert-card">
-<h3>Google Cloud Career Launchpad</h3>
-<div class="cert-overlay">
-<iframe src="google-cloud-career-launchpad.pdf"></iframe>
-</div>
-</div>
+<div class="cert-card"><h3>Google Cloud Career Launchpad</h3>
+<div class="cert-overlay"><iframe src="google-cloud-career-launchpad.pdf"></iframe></div></div>
 
-<div class="cert-card">
-<h3>Oracle – Data Science & Gen AI</h3>
-<div class="cert-overlay">
-<iframe src="oracle-data-science.pdf"></iframe>
-</div>
-</div>
+<div class="cert-card"><h3>Oracle – Data Science </h3>
+<div class="cert-overlay"><iframe src="oracle-data-science.pdf"></iframe></div></div>
 
-<div class="cert-card">
-<h3>IBM – Cloud Computing</h3>
-<div class="cert-overlay">
-<iframe src="ibm-cloud-computing.pdf"></iframe>
-</div>
-</div>
+<div class="cert-card"><h3>IBM – Cloud Computing</h3>
+<div class="cert-overlay"><iframe src="ibm-cloud-computing.pdf"></iframe></div></div>
 
-<div class="cert-card">
-<h3>ServiceNow – Welcome</h3>
-<div class="cert-overlay">
-<iframe src="servicenow-welcome.pdf"></iframe>
-</div>
-</div>
+<div class="cert-card"><h3>ServiceNow – Welcome</h3>
+<div class="cert-overlay"><iframe src="servicenow-welcome.pdf"></iframe></div></div>
 
-<div class="cert-card">
-<h3>TATA – Generative AI</h3>
-<div class="cert-overlay">
-<iframe src="tata-generative-ai.pdf"></iframe>
-</div>
-</div>
+<div class="cert-card"><h3>TATA – Generative AI</h3>
+<div class="cert-overlay"><iframe src="tata-generative-ai.pdf"></iframe></div></div>
 
-<div class="cert-card">
-<h3>Red Team Leaders – Cybersecurity Educator</h3>
-<div class="cert-overlay">
-<iframe src="red-team-cybersecurity-educator.pdf"></iframe>
-</div>
-</div>
+<div class="cert-card"><h3>Red Team Leaders – Cybersecurity Educator</h3>
+<div class="cert-overlay"><iframe src="red-team-cybersecurity-educator.pdf"></iframe></div></div>
 
 </div>
 </section>
