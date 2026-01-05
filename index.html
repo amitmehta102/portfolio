@@ -114,33 +114,58 @@ nav ul li a:hover::after{width:100%}
 @media(max-width:900px){.cert-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:600px){.cert-grid{grid-template-columns:1fr}}
 
+/* CARD */
 .cert-card{
   position:relative;
   background:var(--card);
   border:1px solid #1e293b;
   border-radius:14px;
-  overflow:hidden;
   height:320px;
-  transition:.35s
+  overflow:hidden;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  transition:.35s;
 }
 
-.cert-card:hover{
-  background:var(--blue);
-  transform:translateY(-8px)
+/* TITLE – VISIBLE INITIALLY */
+.cert-card h3{
+  z-index:2;
+  text-align:center;
+  padding:20px;
+  font-size:1.1rem;
+  transition:.35s;
 }
-.cert-card h3{text-align:center}
 
+/* PDF – HIDDEN INITIALLY */
 .cert-overlay{
   position:absolute;
   inset:0;
+  opacity:0;
+  transition:.35s;
+}
+
+/* HOVER EFFECT */
+.cert-card:hover{
+  background:var(--blue);
+  transform:translateY(-8px);
+}
+
+.cert-card:hover .cert-overlay{
+  opacity:1;
+}
+
+.cert-card:hover h3{
+  opacity:0;
 }
 
 .cert-overlay iframe{
   width:100%;
   height:100%;
   border:none;
-  pointer-events:none; /* disables scrolling */
+  pointer-events:none;
 }
+
 
 
 /* CONTACT / FOOTER */
@@ -318,60 +343,65 @@ impact-driven environments.
     <!-- Emusic -->
     <div class="card">
       <h3>
-        <a href="https://github.com/amitmehta102/Emusic"
-           target="_blank"
-           rel="noopener noreferrer">
+        <a href="https://github.com/amitmehta102/Emusic" target="_blank" rel="noopener noreferrer">
           Emusic
         </a>
       </h3>
       <p>
         A Python-based music application demonstrating scripting and data handling.
       </p>
+      <div class="project-links">
+        <a href="https://amitmehta102.github.io/Emusic/" target="_blank">Live Demo</a>
+        <a href="https://github.com/amitmehta102/Emusic" target="_blank">GitHub</a>
+      </div>
     </div>
 
     <!-- PhotoBooth -->
     <div class="card">
       <h3>
-        <a href="https://github.com/amitmehta102/PhotoBooth"
-           target="_blank"
-           rel="noopener noreferrer">
+        <a href="https://github.com/amitmehta102/PhotoBooth" target="_blank" rel="noopener noreferrer">
           PhotoBooth
         </a>
       </h3>
       <p>
-        An interactive JavaScript-based PhotoBooth web app for capturing and
-        manipulating images using browser APIs.
+        Interactive JavaScript PhotoBooth web app using browser APIs.
       </p>
+      <div class="project-links">
+        <a href="https://amitmehta102.github.io/PhotoBooth/" target="_blank">Live Demo</a>
+        <a href="https://github.com/amitmehta102/PhotoBooth" target="_blank">GitHub</a>
+      </div>
     </div>
 
     <!-- StrangerThings -->
     <div class="card">
       <h3>
-        <a href="https://github.com/amitmehta102/StrangerThings"
-           target="_blank"
-           rel="noopener noreferrer">
+        <a href="https://github.com/amitmehta102/StrangerThings" target="_blank" rel="noopener noreferrer">
           StrangerThings
         </a>
       </h3>
       <p>
-        A responsive fan-themed website built with HTML and CSS showcasing layout,
-        styling, and front-end design skills.
+        A responsive fan-themed website built with HTML and CSS.
       </p>
+      <div class="project-links">
+        <a href="https://amitmehta102.github.io/StrangerThings/" target="_blank">Live Demo</a>
+        <a href="https://github.com/amitmehta102/StrangerThings" target="_blank">GitHub</a>
+      </div>
     </div>
 
     <!-- Chai -->
     <div class="card">
       <h3>
-        <a href="https://github.com/amitmehta102/Chai"
-           target="_blank"
-           rel="noopener noreferrer">
+        <a href="https://github.com/amitmehta102/Chai" target="_blank" rel="noopener noreferrer">
           Chai
         </a>
       </h3>
       <p>
-        A clean static website for a chai café concept demonstrating UI layout,
-        content structuring, and basic web design principles.
+        A static chai café website demonstrating UI layout and web design principles.
       </p>
+      <div class="project-links">
+        <a href="https://amitmehta102.github.io/Chai/" target="_blank">Live Demo</a>
+        <a href="https://github.com/amitmehta102/Chai" target="_blank">GitHub</a>
+      </div>
     </div>
 
   </div>
